@@ -61,7 +61,7 @@ for track in gpx.tracks:
                     print('存入的下标i1为:%d'%i1)
                     n1+=1
                     print('num_trk:%d,num_seg:%d,num_p:%d'%(num_trk,num_seg,num_p))
-                    point_list.append(num_p)
+                    point_list.append(num_p+1)
                     gpxpylist14.append(n1) #记录每段segment有几个不符合条件的点
                 else:
                     pass
@@ -118,8 +118,9 @@ for track in gpx.tracks:
         # 在轨迹段中直接添加点数据，经纬度和高程
         #print部分用于测试
 
-        if len(op[trk_time][seg_time])>0:
-            flag =True
+        if trk_time in op:
+            if seg_time in op[trk_time]:
+                flag =True
 
         if flag:
             print('trk_time:%d,seg_time:%d' %(trk_time, seg_time))
