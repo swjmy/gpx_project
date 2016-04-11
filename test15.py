@@ -3,10 +3,10 @@ import gpxpy.gpx
 from geopy.distance import vincenty
 
 
-gpx_file=open('CAStd_116.gpx','r+')
+gpx_file=open('CAStd_2.gpx','r+')
 gpx=gpxpy.parse(gpx_file)
 
-gpx_file1=open('CCADST.gpx', "w") #打开文件，进行写操作
+gpx_file1=open('CAStd_2_out.gpx', "w") #打开文件，进行写操作
 out=gpxpy.gpx.GPX()
 
 
@@ -19,17 +19,25 @@ def splite(start,avg,seg,new_trk):
 
     for point in seg.points[start:]:
         i_p+=1
+        #访问到segment.points中第几个point
+        index = i_p+start
+        #判断distance
         if pre_point:
             newport_ri=(point.latitude,point.longitude)
             distance=vincenty(pre_point,newport_ri).meters
             if distance>avg:
-                #递归
-                splite(start=start+i_p,avg=avg,seg=seg,new_trk=new_trk)
+                #出口1：查出不合格的distance，将当前new_seg加入
+                new_trk.segments.append(new_seg)
+                #继续后面的检查
+                splite(index-1,avg=avg,seg=seg,new_trk=new_trk)
                 break
-            else:new_seg.points.append(seg.points[i_p+start-1])
-        else:new_seg.points.append(seg.points[i_p+start-1])
+            else:new_seg.points.append(seg.points[index-1])
+        else:new_seg.points.append(seg.points[index-1])
+        if index == len(seg.points):
+            #出口2：已检查完全部point，将最后一个new_seg加入
+            new_trk.segments.append(new_seg)
         pre_point=(point.latitude,point.longitude)
-    new_trk.segments.append(new_seg)
+
 
 
 #计算平均值的三倍
