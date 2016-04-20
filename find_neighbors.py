@@ -36,10 +36,10 @@ def getNeighbrs(i,eps,segment):
         if (pre):
             dis += vincenty((pre.latitude,pre.longitude),
                             (point.latitude,point.longitude)).meters
+            neighbors.append(point)
             if dis > eps:
-                neighbors.append(point)
+                neighbors.pop()
                 break
-            neighbors.pop()
         pre = point
     return neighbors
 
