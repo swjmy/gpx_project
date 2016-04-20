@@ -52,7 +52,7 @@ class GetEps():
                 total_dis += distance
             pre_point = (point.latitude, point.longitude)
 
-        if i_p > 1:  # segment中点的数量大于1个
+        if i_p > 2:  # segment中点的数量大于1个
             avg_value = total_dis / i_dis
             print(total_dis, i_dis, avg_value)
             variance = 0.0  # 方差

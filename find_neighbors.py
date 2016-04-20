@@ -32,16 +32,18 @@ def getNeighbrs(i,eps,segment):
     #向后查找
     pre = None
     dis=0.0
+    i_last=0
     for point in segment.points[i::1]:
         if (pre):
             dis += vincenty((pre.latitude,pre.longitude),
                             (point.latitude,point.longitude)).meters
             neighbors.append(point)
             if dis > eps:
+                i_last=i
                 neighbors.pop()
                 break
         pre = point
-    return neighbors
+    return (neighbors,i_last)
 
 
 
@@ -51,15 +53,16 @@ for track in gpx.tracks:
         print('points :%d'%len(segment.points))
         eps = get_Eps(segment)
         print('eps:%f'%eps)
-        for i,p in enumerate(segment.points):
-            neighbors = getNeighbrs(i,eps,segment)
-            if neighbors:
-                print('neighors %d: %d' % (i, len(neighbors)))
-                first = neighbors.popleft()
-                last = neighbors.pop()
-                max_dis = vincenty((first.latitude, first.longitude),
-                                   (last.latitude, last.longitude)).meters
-                print('max dis:%f'%max_dis)
+        if eps:
+            for i, p in enumerate(segment.points):
+                neighbors, i_last = getNeighbrs(i, eps, segment)
+                if len(neighbors):
+                    print('neighors %d: %d' % (i, len(neighbors)))
+                    first = neighbors.popleft()
+                    last = neighbors.pop()
+                    max_dis = vincenty((first.latitude, first.longitude),
+                                       (last.latitude, last.longitude)).meters
+                    print('max dis:%f' % max_dis)
 
 
 
