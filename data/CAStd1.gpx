@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx>
+  <trk>
+    <name>1.gpx</name>
+    <desc>Beijing. Arrival. Temple of Heaven</desc>
+    <url>https://api.openstreetmap.org/user/subtle-fox/traces/1878817</url>
+    <trkseg>
+      <trkpt lat="39.879559" lon="116.398715">
+        <time>2014-10-09T07:15:25Z</time>
+      </trkpt>
+      <trkpt lat="39.882206" lon="116.396405">
+        <time>2014-10-09T07:33:30Z</time>
+      </trkpt>
+      <trkpt lat="39.88225" lon="116.3964">
+        <time>2014-10-09T07:33:32Z</time>
+      </trkpt>
+      <trkpt lat="39.883372" lon="116.397867">
+        <time>2014-10-09T07:41:15Z</time>
+      </trkpt>
+          
+      <trkpt lat="39.883517" lon="116.397904">
+        <time>2014-10-09T07:42:02Z</time>
+      </trkpt>
+     
+      <trkpt lat="39.883569" lon="116.397947">
+        <time>2014-10-09T07:42:09Z</time>
+      </trkpt>
+                   
+      <trkpt lat="39.880288" lon="116.402258">
+        <time>2014-10-09T08:45:41Z</time>
+      </trkpt>
+      
+      <trkpt lat="39.877519" lon="116.41161">
+        <time>2014-10-09T09:31:50Z</time>
+      </trkpt>
+            
+      <trkpt lat="39.877628" lon="116.411612">
+        <time>2014-10-09T09:31:57Z</time>
+      </trkpt>
+      
+      <trkpt lat="39.882671" lon="116.414186">
+        <time>2014-10-09T09:41:56Z</time>
+      </trkpt>
+     
+      <trkpt lat="39.88299" lon="116.41414">
+        <time>2014-10-09T09:42:57Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+   <trk>
+    <trkseg>
+      <trkpt lat="39.911113" lon="116.408918"/>    
+      <trkpt lat="39.922213" lon="116.408928"/>
+      <trkpt lat="39.933313" lon="116.408938"/>                       
+      <trkpt lat="39.944413" lon="116.408948"/>          
+      <trkpt lat="39.955513" lon="116.408958"/>      
+      <trkpt lat="39.966613" lon="116.408968"/>
+      <trkpt lat="39.977713" lon="116.408978"/>
+      <trkpt lat="39.988813" lon="116.408988"/>    
+      <trkpt lat="39.999913" lon="116.408998"/>    
+    </trkseg>
+  </trk>
+   <trk>
+    <trkseg>
+      <trkpt lat="39.911113" lon="116.407918"/>    
+      <trkpt lat="39.912213" lon="116.407928"/>
+      <trkpt lat="39.913313" lon="116.407938"/>                       
+      <trkpt lat="39.914413" lon="116.407948"/>          
+      <trkpt lat="39.915513" lon="116.407958"/>      
+      <trkpt lat="39.916613" lon="116.407968"/>
+      <trkpt lat="39.917713" lon="116.407978"/>
+      <trkpt lat="39.918813" lon="116.407988"/>    
+      <trkpt lat="39.919913" lon="116.407998"/>    
+    </trkseg>
+  </trk>
+  <trk>
+    <trkseg>
+      <trkpt lat="39.914563" lon="116.407938"/>    
+      <trkpt lat="39.910283" lon="116.40517"/>
+      <trkpt lat="39.909363" lon="116.405121"/>                       
+      <trkpt lat="39.9002557" lon="116.4003999"/>          
+      <trkpt lat="39.9003403" lon="116.4053544"/>      
+      <trkpt lat="39.9001738" lon="116.4054324"/>
+      <trkpt lat="39.8999425" lon="116.4055747"/>
+      <trkpt lat="39.8999869" lon="116.4055142"/>    
+      <trkpt lat="39.8999365" lon="116.4054981"/>    
+    </trkseg>
+  </trk>
+</gpx>
